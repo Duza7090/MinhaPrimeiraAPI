@@ -1,0 +1,30 @@
+@URL = http://localhost:5113
+
+
+GET {{URL}}/api/books
+Accept: application/json
+
+###
+GET {{URL}}/api/books/2
+Accept: application/json
+
+###
+POST {{URL}}/api/books
+Content-Type: application/json
+{
+
+  "title": "O Guida do Mochileiro das Galaxias",
+  "author": "Eu mesmo",
+  "yearPublished": 2025
+}
+###
+PUT {{URL}}/api/books/3
+Content-Type: application/json
+{
+  "id": 3,
+  "title": "The Hitchhiker's Guide to the Galaxy",
+  "author": "Douglas Adams",
+  "yearPublished": 1985
+}
+###
+DELETE {{URL}}/api/books/2
